@@ -1,0 +1,14 @@
+{
+  "gateway-site" : {
+    "properties_attributes" : { },
+    "properties" : {
+      "gateway.gateway.conf.dir" : "deployments",
+      "gateway.hadoop.kerberos.secured" : "false",
+      "gateway.path" : "gateway",
+      "gateway.port" : "8443",
+      "java.security.auth.login.config" : "/etc/knox/conf/krb5JAASLogin.conf",
+      "java.security.krb5.conf" : "/etc/knox/conf/krb5.conf",
+      "sun.security.krb5.debug" : "true"
+    }
+  }
+}

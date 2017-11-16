@@ -1,0 +1,40 @@
+{
+  "webhcat-site": {
+    "properties_attributes": {},
+    "properties": {
+      "templeton.hive.properties": "hive.metastore.local=false,hive.metastore.uris=thrift://%HOSTGROUP::control1%:9083,hive.metastore.sasl.enabled=false,hive.metastore.execute.setugi=true",
+      "webhcat.proxyuser.hue.groups": "*",
+      "webhcat.proxyuser.hue.hosts": "*",
+      "webhcat.proxyuser.knox.groups": "*",
+      "webhcat.proxyuser.knox.hosts": "*",
+      "templeton.exec.timeout" : "60000",
+      "templeton.hadoop" : "/usr/hdp/${hdp.version}/hadoop/bin/hadoop",
+      "templeton.hadoop.conf.dir" : "/etc/hadoop/conf",
+      "templeton.hadoop.queue.name" : "default",
+      "templeton.hcat" : "/usr/hdp/${hdp.version}/hive/bin/hcat",
+      "templeton.hcat.home" : "hive.tar.gz/hive/hcatalog",
+      "templeton.hive.archive" : "hdfs:///hdp/apps/${hdp.version}/hive/hive.tar.gz",
+      "templeton.hive.extra.files" : "/usr/hdp/${hdp.version}/tez/conf/tez-site.xml,/usr/hdp/${hdp.version}/tez,/usr/hdp/${hdp.version}/tez/lib",
+      "templeton.hive.home" : "hive.tar.gz/hive",
+      "templeton.hive.path" : "hive.tar.gz/hive/bin/hive",
+      "templeton.jar" : "/usr/hdp/${hdp.version}/hive/share/webhcat/svr/lib/hive-webhcat-*.jar",
+      "templeton.kerberos.keytab" : "/etc/security/keytabs/spnego.service.keytab",
+      "templeton.kerberos.principal" : "HTTP/_HOST@REDSTACK.COM",
+      "templeton.kerberos.secret" : "secret",
+      "templeton.libjars" : "/usr/hdp/${hdp.version}/zookeeper/zookeeper.jar,/usr/hdp/${hdp.version}/hive/lib/hive-common.jar",
+      "templeton.override.enabled" : "false",
+      "templeton.pig.archive" : "hdfs:///hdp/apps/${hdp.version}/pig/pig.tar.gz",
+      "templeton.pig.path" : "pig.tar.gz/pig/bin/pig",
+      "templeton.port" : "50111",
+      "templeton.python" : "${env.PYTHON_CMD}",
+      "templeton.sqoop.archive" : "hdfs:///hdp/apps/${hdp.version}/sqoop/sqoop.tar.gz",
+      "templeton.sqoop.home" : "sqoop.tar.gz/sqoop",
+      "templeton.sqoop.path" : "sqoop.tar.gz/sqoop/bin/sqoop",
+      "templeton.storage.class" : "org.apache.hive.hcatalog.templeton.tool.ZooKeeperStorage",
+      "templeton.streaming.jar" : "hdfs:///hdp/apps/${hdp.version}/mapreduce/hadoop-streaming.jar",
+      "templeton.zookeeper.hosts" : "%HOSTGROUP::control2%:2181,%HOSTGROUP::control1%:2181,%HOSTGROUP::master%:2181",
+      "webhcat.proxyuser.ambari-server-redstack.groups" : "*",
+      "webhcat.proxyuser.ambari-server-redstack.hosts" : "%HOSTGROUP::master%"
+    }
+  }
+}

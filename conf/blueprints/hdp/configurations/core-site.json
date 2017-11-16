@@ -1,0 +1,40 @@
+{
+  "core-site" : {
+    "properties_attributes" : { },
+    "properties" : {
+      "fs.defaultFS" : "hdfs://redstack",
+      "fs.trash.interval" : "360",
+      "ha.failover-controller.active-standby-elector.zk.op.retries" : "120",
+      "ha.zookeeper.quorum" : "%HOSTGROUP::master%:2181,%HOSTGROUP::control1%:2181,%HOSTGROUP::control2%:2181",
+      "hadoop.http.authentication.simple.anonymous.allowed" : "true",
+      "hadoop.proxyuser.HTTP.groups" : "users",
+      "hadoop.proxyuser.HTTP.hosts" : "%HOSTGROUP::master%",
+      "hadoop.proxyuser.ambari-server-redstack.groups" : "*",
+      "hadoop.proxyuser.ambari-server-redstack.hosts" : "%HOSTGROUP::master%",
+      "hadoop.proxyuser.hcat.groups" : "*",
+      "hadoop.proxyuser.hcat.hosts" : "%HOSTGROUP::master%",
+      "hadoop.proxyuser.hdfs.groups" : "*",
+      "hadoop.proxyuser.hdfs.hosts" : "*",
+      "hadoop.proxyuser.hive.groups" : "*",
+      "hadoop.proxyuser.hive.hosts" : "%HOSTGROUP::master%",
+      "hadoop.proxyuser.knox.groups" : "users",
+      "hadoop.proxyuser.knox.hosts" : "%HOSTGROUP::control1%",
+      "hadoop.proxyuser.livy.groups" : "*",
+      "hadoop.proxyuser.livy.hosts" : "*",
+      "hadoop.proxyuser.yarn.groups" : "*",
+      "hadoop.proxyuser.yarn.hosts" : "*",
+      "hadoop.security.auth_to_local" : "RULE:[1:$1@$0](ambari-qa-redstack@REDSTACK.COM)s/.*/ambari-qa/\nRULE:[1:$1@$0](hdfs-redstack@REDSTACK.COM)s/.*/hdfs/\nRULE:[1:$1@$0](spark-redstack@REDSTACK.COM)s/.*/spark/\nRULE:[1:$1@$0](zeppelin-redstack@REDSTACK.COM)s/.*/zeppelin/\nRULE:[1:$1@$0](.*@REDSTACK.COM)s/@.*//\nRULE:[2:$1@$0](dn@REDSTACK.COM)s/.*/hdfs/\nRULE:[2:$1@$0](hive@REDSTACK.COM)s/.*/hive/\nRULE:[2:$1@$0](jhs@REDSTACK.COM)s/.*/mapred/\nRULE:[2:$1@$0](knox@REDSTACK.COM)s/.*/knox/\nRULE:[2:$1@$0](livy@REDSTACK.COM)s/.*/livy/\nRULE:[2:$1@$0](nm@REDSTACK.COM)s/.*/yarn/\nRULE:[2:$1@$0](nn@REDSTACK.COM)s/.*/hdfs/\nRULE:[2:$1@$0](rm@REDSTACK.COM)s/.*/yarn/\nRULE:[2:$1@$0](yarn@REDSTACK.COM)s/.*/yarn/\nDEFAULT",
+      "hadoop.security.authentication" : "kerberos",
+      "hadoop.security.authorization" : "true",
+      "io.compression.codecs" : "org.apache.hadoop.io.compress.GzipCodec,org.apache.hadoop.io.compress.DefaultCodec,org.apache.hadoop.io.compress.SnappyCodec",
+      "io.file.buffer.size" : "131072",
+      "io.serializations" : "org.apache.hadoop.io.serializer.WritableSerialization",
+      "ipc.client.connect.max.retries" : "50",
+      "ipc.client.connection.maxidletime" : "30000",
+      "ipc.client.idlethreshold" : "8000",
+      "ipc.server.tcpnodelay" : "true",
+      "mapreduce.jobtracker.webinterface.trusted" : "false",
+      "net.topology.script.file.name" : "/etc/hadoop/conf/topology_script.py"
+    }
+  }
+}

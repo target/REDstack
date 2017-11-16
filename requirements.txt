@@ -1,0 +1,13 @@
+pymysql
+paramiko
+scp
+pyyaml
+python-cinderclient
+python-glanceclient
+python-heatclient
+python-keystoneclient
+python-neutronclient
+python-novaclient
+python-openstackclient
+python-ldap
+requests[security]

@@ -1,0 +1,13 @@
+[flake8]
+ignore = E501, D, E116, E265, W601, N802, N803, N801
+exclude = service/src/python/redstack/configs.py
+
+# ** Definitions of ignored checks **
+# E501  Line too long
+# D     Everything docstring related
+# E116  Unexpected indentation (comment)
+# E265  Block comment should start with ‘# ‘
+# W601  .has_key() is deprecated, use ‘in’
+# N803  argument name should be lowercase
+# N802  function name should be lowercase
+# N801  class names should use CapWords convention

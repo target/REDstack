@@ -1,0 +1,46 @@
+{
+  "components" : [
+    {
+      "name" : "KERBEROS_CLIENT"
+    },
+    {
+      "name" : "NODEMANAGER"
+    },
+    {
+      "name" : "YARN_CLIENT"
+    },
+    {
+      "name" : "HDFS_CLIENT"
+    },
+    {
+      "name" : "TEZ_CLIENT"
+    },
+    {
+      "name" : "ZOOKEEPER_CLIENT"
+    },
+    {
+      "name" : "HCAT"
+    },
+    {
+      "name" : "PIG"
+    },
+    {
+      "name" : "MAPREDUCE2_CLIENT"
+    },
+    {
+      "name" : "SLIDER"
+    },
+    {
+      "name" : "DATANODE"
+    },
+    {
+      "name" : "HIVE_CLIENT"
+    },
+    {
+      "name" : "SPARK_CLIENT"
+    }
+  ],
+  "configurations" : [ ],
+  "name" : "datanodes",
+  "cardinality" : "4"
+}

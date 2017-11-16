@@ -1,0 +1,28 @@
+{
+  "hive-env": {
+    "properties_attributes": {},
+    "properties": {
+      "hive_hostname": "%HOSTGROUP::master%",
+      "hive.metastore.heapsize": "2048",
+      "hive.heapsize": "1024",
+      "hcat_log_dir" : "/var/log/webhcat",
+      "hcat_pid_dir" : "/var/run/webhcat",
+      "hcat_user" : "hcat",
+      "hive.client.heapsize" : "1024",
+      "hive_ambari_database" : "MySQL",
+      "hive_database" : "New MySQL Database",
+      "hive_database_name" : "hive",
+      "hive_database_type" : "mysql",
+      "hive_exec_orc_storage_strategy" : "SPEED",
+      "hive_log_dir" : "/var/log/hive",
+      "hive_pid_dir" : "/var/run/hive",
+      "hive_security_authorization" : "None",
+      "hive_timeline_logging_enabled" : "true",
+      "hive_txn_acid" : "off",
+      "hive_user" : "hive",
+      "hive_user_nofile_limit" : "32000",
+      "hive_user_nproc_limit" : "16000",
+      "webhcat_user" : "hcat"
+    }
+  }
+}

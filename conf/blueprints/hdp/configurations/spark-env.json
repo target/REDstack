@@ -1,0 +1,15 @@
+{
+  "spark-env": {
+    "properties_attributes": {},
+    "properties": {
+      "hive_kerberos_keytab" : "{{hive_kerberos_keytab}}",
+      "hive_kerberos_principal" : "{{hive_kerberos_principal}}",
+      "spark_daemon_memory" : "1024",
+      "spark_group" : "spark",
+      "spark_log_dir" : "/var/log/spark",
+      "spark_pid_dir" : "/var/run/spark",
+      "spark_thrift_cmd_opts" : "",
+      "spark_user" : "spark"
+    }
+  }
+}

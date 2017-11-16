@@ -1,0 +1,38 @@
+{
+  "yarn-site": {
+    "properties_attributes": {},
+    "properties": {
+      "hadoop.registry.rm.enabled": "false",
+      "hadoop.registry.zk.quorum": "%HOSTGROUP::control1%:2181,%HOSTGROUP::master%:2181,%HOSTGROUP::control2%:2181",
+      "yarn.log.server.url": "http://%HOSTGROUP::control2%:19888/jobhistory/logs",
+      "yarn.nodemanager.linux-container-executor.cgroups.mount-path" : "/sys/fs/cgroup",
+      "yarn.nodemanager.local-dirs": "/grid/0/hadoop/yarn/local",
+      "yarn.nodemanager.log-dirs": "/grid/0/hadoop/yarn/log",
+      "yarn.nodemanager.resource.memory-mb": "6144",
+      "yarn.resourcemanager.address": "%HOSTGROUP::control2%:8050",
+      "yarn.resourcemanager.admin.address": "%HOSTGROUP::control2%:8141",
+      "yarn.resourcemanager.cluster-id": "redstack",
+      "yarn.resourcemanager.ha.automatic-failover.zk-base-path": "/yarn-leader-election",
+      "yarn.resourcemanager.ha.enabled": "true",
+      "yarn.resourcemanager.ha.rm-ids": "rm1,rm2",
+      "yarn.resourcemanager.hostname": "%HOSTGROUP::control2%",
+      "yarn.resourcemanager.hostname.rm1": "%HOSTGROUP::control2%",
+      "yarn.resourcemanager.hostname.rm2": "%HOSTGROUP::control1%",
+      "yarn.resourcemanager.recovery.enabled": "true",
+      "yarn.resourcemanager.resource-tracker.address": "%HOSTGROUP::control2%:8025",
+      "yarn.resourcemanager.scheduler.address": "%HOSTGROUP::control2%:8030",
+      "yarn.resourcemanager.store.class": "org.apache.hadoop.yarn.server.resourcemanager.recovery.ZKRMStateStore",
+      "yarn.resourcemanager.webapp.address": "%HOSTGROUP::control2%:8088",
+      "yarn.resourcemanager.webapp.https.address": "%HOSTGROUP::control1%:8090",
+      "yarn.resourcemanager.zk-address": "%HOSTGROUP::control1%:2181,%HOSTGROUP::master%:2181,%HOSTGROUP::control2%:2181",
+      "yarn.scheduler.maximum-allocation-mb": "6144",
+      "yarn.scheduler.minimum-allocation-mb": "128",
+      "yarn.timeline-service.address": "%HOSTGROUP::control1%:10200",
+      "yarn.timeline-service.entity-group-fs-store.done-dir": "/ats/done/",
+      "yarn.timeline-service.leveldb-state-store.path": "/apps/hadoop/yarn/timeline",
+      "yarn.timeline-service.leveldb-timeline-store.path": "/apps/hadoop/yarn/timeline",
+      "yarn.timeline-service.webapp.address": "%HOSTGROUP::control1%:8188",
+      "yarn.timeline-service.webapp.https.address": "%HOSTGROUP::control1%:8190"
+    }
+  }
+}

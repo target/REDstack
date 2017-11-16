@@ -1,0 +1,58 @@
+{
+  "components" : [
+    {
+      "name": "JOURNALNODE"
+    },
+    {
+      "name" : "MYSQL_SERVER"
+    },
+    {
+      "name" : "HIVE_METASTORE"
+    },
+    {
+      "name" : "KERBEROS_CLIENT"
+    },
+    {
+      "name" : "YARN_CLIENT"
+    },
+    {
+      "name" : "HDFS_CLIENT"
+    },
+    {
+      "name" : "HIVE_SERVER"
+    },
+    {
+      "name" : "TEZ_CLIENT"
+    },
+    {
+      "name" : "ZOOKEEPER_CLIENT"
+    },
+    {
+      "name" : "HCAT"
+    },
+    {
+      "name" : "PIG"
+    },
+    {
+      "name" : "WEBHCAT_SERVER"
+    },
+    {
+      "name" : "MAPREDUCE2_CLIENT"
+    },
+    {
+      "name" : "SLIDER"
+    },
+    {
+      "name" : "ZOOKEEPER_SERVER"
+    },
+    {
+      "name" : "HIVE_CLIENT"
+    },
+    {
+      "name" : "SPARK_CLIENT"
+    }
+  ],
+  "configurations" : [ ],
+  "name" : "master",
+  "cardinality" : "1"
+}

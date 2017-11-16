@@ -1,0 +1,61 @@
+{
+  "components" : [
+    {
+      "name": "JOURNALNODE"
+    },
+    {
+      "name": "ZKFC"
+    },
+    {
+      "name": "APP_TIMELINE_SERVER"
+    },
+    {
+      "name": "HCAT"
+    },
+    {
+      "name": "HDFS_CLIENT"
+    },
+    {
+      "name": "HISTORYSERVER"
+    },
+    {
+      "name": "HIVE_CLIENT"
+    },
+    {
+      "name": "KERBEROS_CLIENT"
+    },
+    {
+      "name": "MAPREDUCE2_CLIENT"
+    },
+    {
+      "name": "PIG"
+    },
+    {
+      "name": "RESOURCEMANAGER"
+    },
+    {
+      "name": "NAMENODE"
+    },
+    {
+      "name": "SLIDER"
+    },
+    {
+      "name": "SPARK_CLIENT"
+    },
+    {
+      "name": "TEZ_CLIENT"
+    },
+    {
+      "name": "YARN_CLIENT"
+    },
+    {
+      "name": "ZOOKEEPER_CLIENT"
+    },
+    {
+      "name": "ZOOKEEPER_SERVER"
+    }
+  ],
+  "configurations" : [ ],
+  "name" : "control1",
+  "cardinality" : "1"
+}

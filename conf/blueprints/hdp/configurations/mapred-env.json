@@ -1,0 +1,13 @@
+{
+  "mapred-env": {
+    "properties_attributes": {},
+    "properties": {
+      "jobhistory_heapsize": "900",
+      "mapred_log_dir_prefix" : "/var/log/hadoop-mapreduce",
+      "mapred_pid_dir_prefix" : "/var/run/hadoop-mapreduce",
+      "mapred_user" : "mapred",
+      "mapred_user_nofile_limit" : "32768",
+      "mapred_user_nproc_limit" : "65536"
+    }
+  }
+}

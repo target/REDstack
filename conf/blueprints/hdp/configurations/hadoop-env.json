@@ -1,0 +1,29 @@
+{
+  "hadoop-env" : {
+    "properties_attributes" : { },
+    "properties" : {
+      "dfs_ha_initial_namenode_active" : "%HOSTGROUP::control1%",
+      "dfs_ha_initial_namenode_standby" : "%HOSTGROUP::control2%",
+      "hadoop_heapsize" : "1024",
+      "dtnode_heapsize" : "768m",
+      "namenode_opt_newsize" : "256m",
+      "namenode_heapsize" : "2048m",
+      "namenode_opt_maxpermsize" : "256m",
+      "nfsgateway_heapsize" : "1024",
+      "namenode_opt_maxnewsize" : "256m",
+      "namenode_opt_permsize" : "128m",
+      "hadoop_pid_dir_prefix" : "/var/run/hadoop",
+      "hadoop_root_logger" : "INFO,RFA",
+      "hdfs_log_dir_prefix" : "/var/log/hadoop",
+      "hdfs_principal_name" : "hdfs-redstack@REDSTACK.COM",
+      "hdfs_tmp_dir" : "/tmp",
+      "hdfs_user" : "hdfs",
+      "hdfs_user_keytab" : "/etc/security/keytabs/hdfs.headless.keytab",
+      "hdfs_user_nofile_limit" : "128000",
+      "hdfs_user_nproc_limit" : "65536",
+      "keyserver_host" : " ",
+      "keyserver_port" : "",
+      "proxyuser_group" : "users"
+    }
+  }
+}

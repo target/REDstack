@@ -1,0 +1,20 @@
+{
+  "yarn-env" : {
+    "properties_attributes" : { },
+     "properties" : {
+        "apptimelineserver_heapsize" : "1024",
+        "resourcemanager_heapsize" : "1024",
+        "yarn_heapsize" : "1024",
+        "nodemanager_heapsize" : "768",
+        "is_supported_yarn_ranger" : "true",
+        "min_user_id" : "1000",
+        "service_check.queue.name" : "default",
+        "yarn_cgroups_enabled" : "false",
+        "yarn_log_dir_prefix" : "/var/log/hadoop-yarn",
+        "yarn_pid_dir_prefix" : "/var/run/hadoop-yarn",
+        "yarn_user" : "yarn",
+        "yarn_user_nofile_limit" : "32768",
+        "yarn_user_nproc_limit" : "65536"
+     }
+  }
+}

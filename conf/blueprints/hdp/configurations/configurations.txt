@@ -1,0 +1,13 @@
+core-site.json
+gateway-site.json
+hadoop-env.json
+hdfs-site.json
+hive-env.json
+mapred-env.json
+mapred-site.json
+spark-env.json
+tez-site.json
+webhcat-site.json
+yarn-env.json
+yarn-site.json
+zoo.cfg.json

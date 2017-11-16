@@ -1,0 +1,14 @@
+{
+  "zoo.cfg" : {
+    "properties_attributes" : { },
+    "properties" : {
+      "autopurge.purgeInterval" : "24",
+      "autopurge.snapRetainCount" : "30",
+      "clientPort" : "2181",
+      "dataDir" : "/grid/0/hadoop/zookeeper",
+      "initLimit" : "10",
+      "syncLimit" : "5",
+      "tickTime" : "2000"
+    }
+  }
+}

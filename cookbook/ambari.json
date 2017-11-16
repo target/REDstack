@@ -1,0 +1,33 @@
+{
+    "update": [
+        {
+            "temporary_config_location": "/tmp",
+            "config_type": "yarn-site",
+            "config_key": "yarn.nodemanager.aux-services",
+            "config_value": "mapreduce_shuffle,spark_shuffle"
+        }, {
+            "temporary_config_location": "/tmp",
+            "config_type": "yarn-site",
+            "config_key": "yarn.nodemanager.aux-services.spark_shuffle.classpath",
+            "config_value": "/usr/share/spark-yarn/yarn/*"
+        }, {
+            "temporary_config_location": "/tmp",
+            "config_type": "yarn-site",
+            "config_key": "yarn.nodemanager.aux-services.spark_shuffle.class",
+            "config_value": "org.apache.spark.network.yarn.YarnShuffleService"
+        }, {
+            "temporary_config_location": "/tmp",
+            "config_type": "yarn-site",
+            "config_key": "spark.authenticate",
+            "config_value": "true"
+        }
+    ], "delete": [{
+            "temporary_config_location": "/tmp",
+            "config_type": "hive-site",
+            "config_key": "hive.server2.authentication.pam.services"
+        }, {
+            "temporary_config_location": "/tmp",
+            "config_type": "hive-site",
+            "config_key": "hive.server2.custom.authentication.class"
+    }]
+}

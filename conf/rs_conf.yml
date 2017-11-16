@@ -1,0 +1,89 @@
+# REDstack version
+redstack_version: "1.0.0"
+
+# Directories
+deployment_directory_base: "/var/stacker/deployments"
+installation_directory: "/opt/redstack/REDstack-oss2"
+cookbook_directory: "/opt/redstack/cookbooks"
+
+# Logging
+log_path: "/var/log/stacker/"
+log_level: "INFO"
+
+# Naming
+stack_name: "redstack"
+cluster_name: "hadoop"
+
+# Openstack
+auth_version: 3
+region: "prd-ca-yul-1"
+availability_zone: "nova"
+openstack_auth_url: "https://api.montreal.ormuco.com:5000/v3"
+external_network_id: "0bfc7605-137d-4ab8-8528-755fdbc3d025"
+
+# Existing openstack network
+try_existing_network: True
+
+# Relevant if not using existing network
+subnet_cidr: "192.168.198.0/24"
+expose_ui_ssh: "0.0.0.0/0"
+subnet_dns_nameservers:
+  - "8.8.8.8"
+  - "8.8.4.4"
+
+# Image
+ssh_user: "centos"
+image_name: "centos-7-latest"
+
+# Openstack credentials
+ost_username: "CHANGEME"
+ost_password: "CHANGEME"
+
+# Use one of either project ID, or project name and domain
+ost_project_id: "CHANGEME"
+ost_domain: "user"
+ost_project_name: "CHANGEME"
+
+# Cacert
+cacert: null
+
+# Rebuild
+use_existing_openstack: false
+
+# Existing key (will generate one if not specified)
+key_name: null
+existing_key_location: null
+
+# Stack type
+stack_type: "hdp"
+
+# Template file from conf/templates
+template_file: "ormuco-hdp.yml"
+
+# HDP versions
+hdp_major_version: "2.5"
+hdp_version: "2.5.3.0"
+hdp_utils: "1.1.0.21"
+define_custom_repos: false
+
+# Ambari versions
+ambari_version: "2.4.2.9"
+ambari_password: "ambari"
+
+# FQDN and Kerberos
+fqdn_address: ".redstack.com"
+kerberos_realm: "REDSTACK.COM"
+kerberos_password: "CHANGEME"
+
+# Volume mount location
+volume_device: "/dev/vdb"
+mount_location: "/grid/0"
+
+# Chef
+chef_rpm_uri: "https://packages.chef.io/files/stable/chef/12.12.15/el/7/chef-12.12.15-1.el7.x86_64.rpm"
+chef_version: "12.12.15"
+chef_tries: 1
+log_chef_to_stdout: true
+
+ambari_db_password: "CHANGEME"
+mysql_root_password: "CHANGEME"

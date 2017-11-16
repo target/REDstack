@@ -1,0 +1,41 @@
+# The template for a cluster in REDstack
+# primary: The master node for the cluster, or the one you want to follow the logs of
+# runlist: The chef runlist (.json) to execute on these node types
+# count: The quantity of this node type to create
+# volume_size: The size of the attached cinder volume to mount
+# flavor: The node flavor: specified in openstack and specifies the RAM, VCPUs and cores on a node
+
+primary: rs-master
+nodes:
+
+  # Master node, hosts ambari-server and master services for cluster
+  rs-master:
+    count: 1
+    volume_size: 30
+    flavor: lmem-8vcpu
+    runlist: hdp-master
+    ambari_group: master
+
+  # First control node
+  rs-control1:
+    count: 1
+    volume_size: 30
+    flavor: lmem-8vcpu
+    runlist: hdp-control
+    ambari_group: control1
+
+  # Second control node
+  rs-control2:
+    runlist: hdp-control
+    count: 1
+    volume_size: 30
+    flavor: lmem-8vcpu
+    ambari_group: control2
+
+  # Datanodes, defined in a count of 4
+  rs-data:
+    count: 4
+    volume_size: 105
+    flavor: lmem-8vcpu
+    runlist: hdp-data
+    ambari_group: datanodes

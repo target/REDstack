@@ -1,0 +1,29 @@
+{
+  "name": "hdp-master",
+  "default_attributes": {
+  },
+  "json_class": "Chef::Role",
+  "env_run_lists": {
+  },
+  "run_list": [
+    "recipe[redstack::runtime]",
+    "recipe[hdp-cloud::disk]",
+    "recipe[hdp-cloud::hosts]",
+    "recipe[hdp-cloud::os]",
+    "recipe[hdp-cloud::kerberos-client]",
+    "recipe[hdp-cloud::kerberos-server]",
+    "recipe[hdp-cloud::ldap-client]",
+    "recipe[hdp-cloud::ldap-server]",
+    "recipe[hdp-cloud::nfs-server]",
+    "recipe[hdp-cloud::local-users]",
+    "recipe[hdp-cloud::ambari-client]",
+    "recipe[hdp-cloud::ambari-server]"
+  ],
+  "description": "",
+  "chef_type": "role",
+  "override_attributes": {
+    "hdp": {
+      "hadoop_bd_size": 60817408
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "hdp-data",
+  "default_attributes": {
+  },
+  "json_class": "Chef::Role",
+  "env_run_lists": {
+  },
+  "run_list": [
+    "recipe[redstack::runtime]",
+    "recipe[hdp-cloud::disk]",
+    "recipe[hdp-cloud::hosts]",
+    "recipe[hdp-cloud::os]",
+    "recipe[hdp-cloud::nfs-client]",
+    "recipe[hdp-cloud::ldap-client]",
+    "recipe[hdp-cloud::kerberos-client]",
+    "recipe[hdp-cloud::local-users]",
+    "recipe[hdp-cloud::ambari-client]"
+  ],
+  "description": "",
+  "chef_type": "role",
+  "override_attributes": {
+    "hdp": {
+      "hadoop_bd_size": 218103808
+    }
+  }
+}

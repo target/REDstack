@@ -1,0 +1,2 @@
+REDstack: 1.0.0
+Java: 1.8
