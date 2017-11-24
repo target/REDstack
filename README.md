@@ -83,3 +83,22 @@ REDstack needs a few configs to be set for your environment before it's ready to
 
 `sh ~/run_redstack.sh` to start the REDstack deployment.
 If it completes, you shoult receive a link to the ambari server on the cluster in the command line
+
+### Security
+
+There are a few security considerations to keep in mind when used this cluster
+
+1. The cluster will, by default, expose a few ports for incoming traffic.
+    * Ambari and Knox - 8443: The cluster manangement UI, and REST endpoint (https)
+    * Application History Server - 8188
+    * Namenode UI - 50070
+    * SSH - 22
+    * Resource Manager UI - 8088
+    * YARN History Server - 19888
+    * Spark History Server - 18080
+    * Zeppelin Notebook - 9995
+    * Jornalnode UI - 8480
+2. If you want to expose any other ports, you will need to manually update the security group. You can do this from the CLI on the docker image or the Openstack UI.
+2. Cluster access is firewalled off by a security group running in front of the cluster in Openstack.  When you specify `expose_ui_ssh`, it is important that you provide a CIDR that only your connections, or those that you trust, can access the cluster.
+3. None of the passwords provided in the config on the docker image will be in plaintext on the cluster itself, once you destroy the docker image after creating the cluster, they are gone.
+4. All Hadoop services are secured with kerberos, and cannot be used without authenticating with a keytab. Each user provided in the cluster will have a keytab granted by default and located in `/user_items/keytabs`, All Hadoop services will have their keytabs in `/etc/security/keytabs`. The kerberos server is located on the `rs-master` node, and the password is configured in the docker image prior to cluster install.
