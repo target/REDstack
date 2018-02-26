@@ -3,7 +3,7 @@ redstack_version: "1.0.0"
 
 # Directories
 deployment_directory_base: "/var/stacker/deployments"
-installation_directory: "/opt/redstack/REDstack-oss2"
+installation_directory: "/opt/redstack/REDstack"
 cookbook_directory: "/opt/redstack/cookbooks"
 
 # Logging
