@@ -20,7 +20,7 @@ class BlueprintBuilder:
         self.stack_type = 'HDP'
 
         self.blueprint_directory = os.path.join(self.deploy.installation_directory,
-                                                'conf', 'blueprints', self.stack_type)
+                                                'conf', 'blueprints', self.stack_type.lower())
 
     def create_all(self):
         # type: () -> None
