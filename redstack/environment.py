@@ -54,7 +54,7 @@ class Environment:
             new_private_key = os.path.join(self.deploy.directory, self.deploy.key_name)
             shutil.copyfile(self.deploy.cluster.private_key, new_private_key)
             self.deploy.cluster.private_key = os.path.join(self.deploy.directory, new_private_key)
-            os.chmod(self.deploy.cluster.private_key, 0400)
+            os.chmod(self.deploy.cluster.private_key, 0o400)
 
         logger.info('Deploy directory: {0}'.format(self.deploy.directory))
 

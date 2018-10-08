@@ -436,7 +436,7 @@ class Openstack:
         key_path = os.path.join(self.deploy.directory, self.deploy.name)
         with open(key_path, "w") as key_file:
             key_file.write(private_key)
-            os.chmod(key_path, 0400)
+            os.chmod(key_path, 0o400)
 
         logger.info("Created new Private Key file for Openstack deployment")
         return key_path
